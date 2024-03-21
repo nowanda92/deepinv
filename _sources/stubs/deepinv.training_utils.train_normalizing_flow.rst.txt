@@ -1,0 +1,9 @@
+﻿train\_normalizing\_flow
+========================
+
+.. currentmodule:: deepinv.training_utils
+
+.. autofunction:: train_normalizing_flow
+
+.. minigallery:: deepinv.training_utils.train_normalizing_flow
+    :add-heading: Examples using ``train_normalizing_flow``:
