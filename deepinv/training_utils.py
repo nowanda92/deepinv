@@ -433,7 +433,7 @@ class Trainer:
                 current_log = (
                     self.logs_metrics_train[k] if train else self.logs_metrics_eval[k]
                 )
-                current_log.update(metric.detach())
+                current_log.update(metric)
                 logs[l.__class__.__name__] = current_log.avg
 
         return logs
