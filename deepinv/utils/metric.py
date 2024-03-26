@@ -51,9 +51,9 @@ def cal_psnr(a, b, max_pixel=1, normalize=False):
             an = a
 
         mse = (an - b).abs().pow(2).mean(dim=tuple(range(1, an.ndim)), keepdim=False)
-        psnr = 20 * torch.log10(max_pixel / (mse.sqrt()+1e-8))
+        psnr = 10 * torch.log10((max_pixel**2) / (mse+1e-8))
 
-    return psnr.mean().item()
+    return psnr.mean()[0]
 
 
 def cal_mse(a, b):
